@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <!-- Barra de progresso no topo -->
+<!-- Barra de progresso fixa no topo -->
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 6px; background-color: #e0e0e0; z-index: 9999;">
+  <div id="barra-progresso" style="width: 0%; height: 100%; background-color: #000; transition: width 1s ease;"></div>
+</div>
+
+<!-- Espaço para compensar a altura da barra -->
+<div style="height: 6px;"></div>
+
+<script>
+  // Defina aqui a porcentagem da etapa atual (ex: 20%, 40%, etc.)
+  const progressoAtual = 5; // ← Edite este número para cada página
+  
+  // Aplica o progresso assim que a página carrega
+  window.addEventListener('load', () => {
+    document.getElementById("barra-progresso").style.width = progressoAtual + "%";
+  });
+</script>
+
+<!-- Espaço para compensar a altura da barra -->
+<div style="height: 6px;"></div>
+  <div class="container">
+<h1 class="titulo menor">
+  É A SUA CHANCE DE ENTRAR PARA O <span class="destaque">MERCADO BILIONÁRIO DE CONTEÚDO ADULTO</span>
+</h1>
+    <p class="subtitulo"><strong>Você criará a sua modelo +18 personalizada em poucos cliques.</strong></p>
+    <img src="modelo-realista.jpg" alt="Modelo +18" class="imagem-modelo">
+      <!-- Aqui você pode substituir por <img src="modelo.jpg" alt=""> -->
+<div style="width: 81%; max-width: 280px; margin: 20px auto 0 auto;">
+<button class="botao" onclick="window.location.href='etapa2.html'">CRIAR MODELO +18</button>
+</div>
+</body>
+</html>

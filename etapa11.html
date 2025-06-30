@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etapa 11</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .imagem {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin: 30px auto;
+      border-radius: 8px;
+    }
+    .texto-etapa {
+      margin: 20px 0 10px;
+      font-size: 18px;
+    }
+    .barra {
+      width: 100%;
+      max-width: 400px;
+      height: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      margin: 0 auto 20px;
+      overflow: hidden;
+      position: relative;
+    }
+    .progresso {
+      height: 100%;
+      width: 0%;
+      background-color: #00cc66;
+      border-radius: 10px;
+      transition: width 0.2s linear;
+    }
+    .porcentagem {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 0;
+      left: 0;
+      font-size: 14px;
+      color: #fff;
+      line-height: 20px;
+    }
+  </style>
+</head>
+<body>
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 6px; background-color: #e0e0e0; z-index: 9999;">
+  <div id="barra-progresso" style="width: 0%; height: 100%; background-color: #000; transition: width 1s ease;"></div>
+</div>
+
+<!-- Espaço para compensar a altura da barra -->
+<div style="height: 6px;"></div>
+
+<script>
+  // Defina aqui a porcentagem da etapa atual (ex: 20%, 40%, etc.)
+  const progressoAtual = 85; // ← Edite este número para cada página
+  
+  // Aplica o progresso assim que a página carrega
+  window.addEventListener('load', () => {
+    document.getElementById("barra-progresso").style.width = progressoAtual + "%";
+  });
+</script>
+  <h2>Gerando sua modelo...</h2>
+  <img src="modelo-loading.jpg" alt="Imagem da Modelo" class="imagem" />
+
+  <div class="texto-etapa">Entendendo suas preferências</div>
+  <div class="barra">
+    <div id="barra1" class="progresso"></div>
+    <div id="pct1" class="porcentagem">0%</div>
+  </div>
+
+  <div class="texto-etapa">Criando uma versão de IA sem censura</div>
+  <div class="barra">
+    <div id="barra2" class="progresso"></div>
+    <div id="pct2" class="porcentagem">0%</div>
+  </div>
+
+  <div class="texto-etapa">Toques finais da sua modelo</div>
+  <div class="barra">
+    <div id="barra3" class="progresso"></div>
+    <div id="pct3" class="porcentagem">0%</div>
+  </div>
+
+  <script>
+    const barras = [
+      { id: 'barra1', pct: 'pct1', velocidade: 120 },
+      { id: 'barra2', pct: 'pct2', velocidade: 90 },
+      { id: 'barra3', pct: 'pct3', velocidade: 150 }
+    ];
+
+    let carregando = barras.map((barra, index) => {
+      let progresso = 0;
+      return setInterval(() => {
+        if (progresso < 100) {
+          progresso++;
+          document.getElementById(barra.id).style.width = progresso + '%';
+          document.getElementById(barra.pct).textContent = progresso + '%';
+        } else {
+          clearInterval(carregando[index]);
+        }
+      }, barra.velocidade);
+    });
+
+    setTimeout(() => {
+      window.location.href = 'etapa12.html';
+    }, 15500); // redireciona após 10.5 segundos
+  </script>
+
+</body>
+</html>

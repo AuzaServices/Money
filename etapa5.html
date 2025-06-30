@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etapa 5</title>
+</head>
+<body style="background-color: #ffffff; font-family: Arial, sans-serif; margin: 0; padding: 0; display: flex; justify-content: center; color: rgb(0, 0, 0);">
+  <div style="max-width: 480px; padding: 30px 20px; text-align: center;">
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 6px; background-color: #e0e0e0; z-index: 9999;">
+  <div id="barra-progresso" style="width: 0%; height: 100%; background-color: #000; transition: width 1s ease;"></div>
+</div>
+
+<!-- Espaço para compensar a altura da barra -->
+<div style="height: 6px;"></div>
+
+<script>
+  // Defina aqui a porcentagem da etapa atual (ex: 20%, 40%, etc.)
+  const progressoAtual = 60; // ← Edite este número para cada página
+  
+  // Aplica o progresso assim que a página carrega
+  window.addEventListener('load', () => {
+    document.getElementById("barra-progresso").style.width = progressoAtual + "%";
+  });
+</script>
+    <!-- Pergunta -->
+    <h2 style="font-size: 20px; margin-bottom: 30px;">
+      Quantos anos você quer que sua Modelo IA tenha?
+    </h2>
+    
+    <!-- Grade de opções -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; justify-items: center;">
+      
+      <!-- Opção 1 -->
+      <div style="cursor: pointer;" onclick="window.location.href='etapa6.html'">
+        <img src="idade1.jpg" alt="18 anos" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;"/>
+        <div style="margin-top: 8px; font-size: 16px;">18</div>
+      </div>
+      
+      <!-- Opção 2 -->
+      <div style="cursor: pointer;" onclick="window.location.href='etapa6.html'">
+        <img src="idade2.jpg" alt="19-21 anos" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;"/>
+        <div style="margin-top: 8px; font-size: 16px;">19–21</div>
+      </div>
+      
+      <!-- Opção 3 -->
+      <div style="cursor: pointer;" onclick="window.location.href='etapa6.html'">
+        <img src="idade3.jpg" alt="22-25 anos" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px; margin-top: 20px;"/>
+        <div style="margin-top: 8px; font-size: 16px;">22–25</div>
+      </div>
+      
+      <!-- Opção 4 -->
+      <div style="cursor: pointer;" onclick="window.location.href='etapa6.html'">
+        <img src="idade4.jpg" alt="26+ anos" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px; margin-top: 20px;"/>
+        <div style="margin-top: 8px; font-size: 16px;">26+</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

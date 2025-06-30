@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etapa 17</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+
+    .imagem-destaque {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .botao-verde {
+      background-color: #00cc66;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 16px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 90%;
+      max-width: 280px;
+    }
+
+    .botao-verde:hover {
+      background-color: #00b359;
+    }
+  </style>
+</head>
+<body>
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 6px; background-color: #e0e0e0; z-index: 9999;">
+  <div id="barra-progresso" style="width: 0%; height: 100%; background-color: #000; transition: width 1s ease;"></div>
+</div>
+
+<!-- Espaço para compensar a altura da barra -->
+<div style="height: 6px;"></div>
+
+<script>
+  // Defina aqui a porcentagem da etapa atual (ex: 20%, 40%, etc.)
+  const progressoAtual = 98; // ← Edite este número para cada página
+  
+  // Aplica o progresso assim que a página carrega
+  window.addEventListener('load', () => {
+    document.getElementById("barra-progresso").style.width = progressoAtual + "%";
+  });
+</script>
+  <h2>Passo a passo personalizado criado!</h2>
+
+  <img src="passo-pronto.jpg" alt="Passo a passo pronto" class="imagem-destaque" />
+
+  <button class="botao-verde" onclick="window.location.href='etapa19.html'">
+    Resgatar meu passo a passo personalizado
+  </button>
+
+</body>
+</html>

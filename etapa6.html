@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etapa 6</title>
+</head>
+<body style="background-color: #ffffff; font-family: Arial, sans-serif; margin: 0; padding: 0; display: flex; justify-content: center; color: rgb(0, 0, 0);">
+  <div style="max-width: 480px; padding: 30px 20px; text-align: center;">
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 6px; background-color: #e0e0e0; z-index: 9999;">
+  <div id="barra-progresso" style="width: 0%; height: 100%; background-color: #000; transition: width 1s ease;"></div>
+</div>
+
+<!-- Espaço para compensar a altura da barra -->
+<div style="height: 6px;"></div>
+
+<script>
+  // Defina aqui a porcentagem da etapa atual (ex: 20%, 40%, etc.)
+  const progressoAtual = 70; // ← Edite este número para cada página
+  
+  // Aplica o progresso assim que a página carrega
+  window.addEventListener('load', () => {
+    document.getElementById("barra-progresso").style.width = progressoAtual + "%";
+  });
+</script>
+    <!-- Título da etapa -->
+    <h2 style="font-size: 20px; margin-bottom: 30px;">
+      Escolha a etnia da sua Modelo IA
+    </h2>
+
+    <!-- Grade com 3 opções -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
+      <!-- Negra -->
+      <div onclick="window.location.href='etapa7.html'" style="cursor: pointer;">
+        <img src="etnia1.jpg" alt="Negra" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;" />
+        <div style="margin-top: 8px; font-size: 16px;">Negra</div>
+      </div>
+
+      <!-- Branca -->
+      <div onclick="window.location.href='etapa7.html'" style="cursor: pointer;">
+        <img src="etnia2.jpg" alt="Branca" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;" />
+        <div style="margin-top: 8px; font-size: 16px;">Branca</div>
+      </div>
+
+      <!-- Mulata -->
+      <div onclick="window.location.href='etapa7.html'" style="cursor: pointer;">
+        <img src="etnia3.jpg" alt="Mulata" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;" />
+        <div style="margin-top: 8px; font-size: 16px;">Mulata</div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>

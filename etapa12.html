@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etapa 12</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      color: rgb(0, 0, 0);
+      margin: 0;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .imagem {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin: 30px auto;
+      border-radius: 8px;
+    }
+
+    .botao-verde {
+      background-color: #00cc66;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 14px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 90%;
+      max-width: 280px;
+      margin-top: 30px;
+    }
+
+    .botao-verde:hover {
+      background-color: #00b359;
+    }
+  </style>
+</head>
+<body>
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 6px; background-color: #e0e0e0; z-index: 9999;">
+  <div id="barra-progresso" style="width: 0%; height: 100%; background-color: #000; transition: width 1s ease;"></div>
+</div>
+
+<!-- Espaço para compensar a altura da barra -->
+<div style="height: 6px;"></div>
+
+<script>
+  // Defina aqui a porcentagem da etapa atual (ex: 20%, 40%, etc.)
+  const progressoAtual = 88; // ← Edite este número para cada página
+  
+  // Aplica o progresso assim que a página carrega
+  window.addEventListener('load', () => {
+    document.getElementById("barra-progresso").style.width = progressoAtual + "%";
+  });
+</script>
+  <h2>Modelo criada!!</h2>
+
+  <!-- Imagem da modelo -->
+  <img src="modelo-final.jpg" alt="Modelo Criada" class="imagem" />
+
+  <!-- Texto motivacional -->
+  <p style="font-size: 18px; margin: 30px auto 20px;">
+    Agora vamos montar o <strong>Passo a Passo infalível</strong> para você faturar <strong>7K por mês</strong> com sua Modelo IA
+  </p>
+
+  <!-- Botão de ação -->
+  <button class="botao-verde" onclick="window.location.href='etapa13.html'">
+    Montar Passo a Passo Infalível
+  </button>
+
+</body>
+</html>

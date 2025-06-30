@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etapa 13</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .opcoes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .opcao {
+      background-color: #ffffff;
+      border: 2px solid #00cc66;
+      border-radius: 10px;
+      padding: 20px 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .opcao:hover {
+      background-color: #00cc66;
+      color: #111;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div style="position: fixed; top: 0; left: 0; width: 100%; height: 6px; background-color: #e0e0e0; z-index: 9999;">
+  <div id="barra-progresso" style="width: 0%; height: 100%; background-color: #000; transition: width 1s ease;"></div>
+</div>
+
+<!-- Espaço para compensar a altura da barra -->
+<div style="height: 6px;"></div>
+
+<script>
+  // Defina aqui a porcentagem da etapa atual (ex: 20%, 40%, etc.)
+  const progressoAtual = 90; // ← Edite este número para cada página
+  
+  // Aplica o progresso assim que a página carrega
+  window.addEventListener('load', () => {
+    document.getElementById("barra-progresso").style.width = progressoAtual + "%";
+  });
+</script>
+
+  <h2>Você tem Instagram ou TikTok instalados no celular?</h2>
+
+  <div class="opcoes">
+    <div class="opcao" onclick="window.location.href='etapa14.html'">Instagram e TikTok</div>
+    <div class="opcao" onclick="window.location.href='etapa14.html'">Tenho Instagram</div>
+    <div class="opcao" onclick="window.location.href='etapa14.html'">Tenho TikTok</div>
+    <div class="opcao" onclick="window.location.href='etapa14.html'">Não tenho nenhum dos dois</div>
+  </div>
+
+</body>
+</html>

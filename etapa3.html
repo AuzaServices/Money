@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etapa 3</title>
+</head>
+<body style="background-color: #ffffff; font-family: Arial, sans-serif; margin: 0; padding: 0; color: white; display: flex; justify-content: center;">
+  <div class="container" style="max-width: 480px; padding: 30px 20px; text-align: center;">
+<!-- Barra de progresso fixa no topo -->
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 6px; background-color: #e0e0e0; z-index: 9999;">
+  <div id="barra-progresso" style="width: 0%; height: 100%; background-color: #000; transition: width 1s ease;"></div>
+</div>
+
+<!-- Espaço para compensar a altura da barra -->
+<div style="height: 6px;"></div>
+
+<script>
+  // Defina aqui a porcentagem da etapa atual (ex: 20%, 40%, etc.)
+  const progressoAtual = 40; // ← Edite este número para cada página
+  
+  // Aplica o progresso assim que a página carrega
+  window.addEventListener('load', () => {
+    document.getElementById("barra-progresso").style.width = progressoAtual + "%";
+  });
+</script>
+    <!-- Frase de impacto -->
+<!-- Frase de impacto -->
+<h2 class="frase-impacto" style="font-size: 20px; text-align: center; font-weight: bold; margin-bottom: 10px; color: #000;">
+  ESSE É O MERCADO <span style="background-color: #be4b4b; color: #000; padding: 2px 4px; border-radius: 4px;">MAIS LUCRATIVO QUE EXISTE</span>
+</h2>
+<p style="font-size: 16px; color: #333333; margin-bottom: 20px;">
+  E eu posso te provar
+</p>
+    
+    <!-- Vídeos do YouTube -->
+    <div class="videos" style="display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 480px; margin-bottom: 40px;">
+      <iframe src="https://www.youtube.com/watch?v=I_dGVbMNRfg" allowfullscreen style="width: 100%; height: 220px; border: none; border-radius: 8px;"></iframe>
+      <iframe src="https://www.youtube.com/watch?v=qY5sOKScDMY" allowfullscreen style="width: 100%; height: 220px; border: none; border-radius: 8px;"></iframe>
+    </div>
+    
+    <!-- Botão verde -->
+    <div style="width: 90%; max-width: 280px; margin: 30px auto 0;">
+<!-- Botão verde -->
+<div style="width: 90%; max-width: 280px; margin: 30px auto 0;">
+  <button style="width: 100%; background-color: #00cc66; color: white; border: none; border-radius: 6px; padding: 14px 20px; font-size: 16px; cursor: pointer;" onclick="window.location.href='etapa4.html'">
+    CONTINUAR
+  </button>
+</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etapa 16</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .texto-etapa {
+      margin: 20px 0 10px;
+      font-size: 18px;
+    }
+
+    .barra {
+      width: 100%;
+      max-width: 400px;
+      height: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      margin: 0 auto 30px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progresso {
+      height: 100%;
+      width: 0%;
+      background-color: #00cc66;
+      border-radius: 10px;
+      transition: width 0.2s linear;
+    }
+
+.porcentagem {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #fff; /* branco puro */
+  top: 0;
+  left: 0;
+  line-height: 20px;
+}
+  </style>
+</head>
+<body>
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 6px; background-color: #e0e0e0; z-index: 9999;">
+  <div id="barra-progresso" style="width: 0%; height: 100%; background-color: #000; transition: width 1s ease;"></div>
+</div>
+
+<!-- Espaço para compensar a altura da barra -->
+<div style="height: 6px;"></div>
+
+<script>
+  // Defina aqui a porcentagem da etapa atual (ex: 20%, 40%, etc.)
+  const progressoAtual = 96; // ← Edite este número para cada página
+  
+  // Aplica o progresso assim que a página carrega
+  window.addEventListener('load', () => {
+    document.getElementById("barra-progresso").style.width = progressoAtual + "%";
+  });
+</script>
+  <h2>Preparando seu passo a passo personalizado!</h2>
+
+  <div class="texto-etapa">Entendendo suas preferências</div>
+  <div class="barra">
+    <div id="barra1" class="progresso"></div>
+    <div id="pct1" class="porcentagem">0%</div>
+  </div>
+
+  <div class="texto-etapa">Criando um método personalizado para sua necessidade</div>
+  <div class="barra">
+    <div id="barra2" class="progresso"></div>
+    <div id="pct2" class="porcentagem">0%</div>
+  </div>
+
+  <script>
+    let progresso1 = 0;
+    let progresso2 = 0;
+
+// Barra 1
+const timer1 = setInterval(() => {
+  if (progresso1 < 100) {
+    progresso1++;
+    document.getElementById("barra1").style.width = progresso1 + "%";
+    document.getElementById("pct1").textContent = progresso1 + "%";
+  } else {
+    clearInterval(timer1);
+  }
+}, 60);
+
+// Barra 2
+const timer2 = setInterval(() => {
+  if (progresso2 < 100) {
+    progresso2 += 2;
+    if (progresso2 > 100) progresso2 = 100;
+    document.getElementById("barra2").style.width = progresso2 + "%";
+    document.getElementById("pct2").textContent = progresso2 + "%";
+  } else {
+    clearInterval(timer2);
+  }
+}, 80);
+
+    setTimeout(() => {
+      window.location.href = 'etapa17.html';
+    }, 7000); // redireciona após o carregamento completo
+  </script>
+
+</body>
+</html>

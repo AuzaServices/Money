@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etapa 19</title>
+</head>
+<body style="background-color: #ffffff; color: rgb(0, 0, 0); font-family: Arial, sans-serif; margin: 0; padding: 30px 20px; text-align: center;">
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 6px; background-color: #e0e0e0; z-index: 9999;">
+  <div id="barra-progresso" style="width: 0%; height: 100%; background-color: #000; transition: width 1s ease;"></div>
+</div>
+
+<!-- Espaço para compensar a altura da barra -->
+<div style="height: 6px;"></div>
+
+<script>
+  // Defina aqui a porcentagem da etapa atual (ex: 20%, 40%, etc.)
+  const progressoAtual = 100; // ← Edite este número para cada página
+  
+  // Aplica o progresso assim que a página carrega
+  window.addEventListener('load', () => {
+    document.getElementById("barra-progresso").style.width = progressoAtual + "%";
+  });
+</script>
+  <h2 style="font-size: 20px; margin-bottom: 30px;">
+    O que você teria que pagar separadamente:
+  </h2>
+
+  <ul style="max-width: 400px; margin: 0 auto 40px; text-align: left; font-size: 16px; list-style: none; padding: 0;">
+    <li style="margin-bottom: 12px;">✅ Treinamento direto ao ponto
+      <span style="text-decoration: line-through; color: #ff4444; margin-left: 5px;">R$97,00</span>
+    </li>
+    <li style="margin-bottom: 12px;">✅ Criação de modelos IA super realistas
+      <span style="text-decoration: line-through; color: #ff4444; margin-left: 5px;">R$147,00</span>
+    </li>
+    <li style="margin-bottom: 12px;">✅ Criação de conteúdos +18 com IA ultra realistas
+      <span style="text-decoration: line-through; color: #ff4444; margin-left: 5px;">R$197,00</span>
+    </li>
+  </ul>
+
+  <div style="font-size: 18px; line-height: 1.5; max-width: 400px; margin: 0 auto 30px;">
+     Tudo isso reunido em:
+    <div style="background-color: #ccffdd; color: #111; padding: 12px; border-radius: 8px; margin: 15px auto; font-size: 16px; max-width: 380px; font-weight: bold;">
+      O Guia Proibido: Descubra como Lucrar com Modelos Adultas de IA
+    </div>
+Por apenas <span style="color: #00cc66; font-weight: bold; font-size: 20px;">R$14,90</span><br>
+<span style="font-size: 14px; color: #ccc;">(pagamento único)</span>
+  </div>
+
+<button onclick="window.location.href='https://hotmart.com/pt-br/marketplace/produtos/o-guia-proibido-descubra-como-lucrar-com-modelos-adultas-de-ia-antes-que-todos-facam-o-mesmo/T99552323T?ref=A100554686A'" style="background-color: #00cc66; color: white; border: none; border-radius: 6px; padding: 14px 20px; font-size: 16px; font-weight: bold; cursor: pointer; width: 90%; max-width: 280px; margin-top: 20px;">
+  Começar a faturar com sua Modelo de IA
+</button>
+
+  <div id="notificacao" style="margin-top: 30px; min-height: 30px;">
+    <div id="notificacao-box" style="display: inline-block; background-color: #696969; color: #eee; padding: 12px 20px; border-radius: 8px; font-size: 14px; opacity: 0; transition: opacity 0.5s ease;">
+    </div>
+  </div>
+
+  <script>
+    const nomes = ["Carlos", "Juliana", "Felipe", "Amanda"];
+    const redes = ["Instagram", "TikTok"];
+    const vagas = [5, 4, 3, 2];
+    let index = 0;
+
+    function exibirNotificacao() {
+      const box = document.getElementById("notificacao-box");
+
+      if (index >= vagas.length) {
+        setTimeout(() => {
+          box.style.opacity = "0";
+        }, 2500);
+        return;
+      }
+
+      const nome = nomes[index % nomes.length];
+      const rede = redes[Math.floor(Math.random() * redes.length)];
+      const vaga = vagas[index];
+      const texto = `${nome} comprou a ${vaga}ª vaga via ${rede}`;
+
+      box.innerText = texto;
+      box.style.opacity = "1";
+
+      setTimeout(() => {
+        box.style.opacity = "0";
+      }, 2500);
+
+      index++;
+      setTimeout(exibirNotificacao, 3000);
+    }
+
+    setTimeout(exibirNotificacao, 1000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etapa 2</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 480px;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .titulo-destaque {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .titulo-destaque span {
+      color: #00cc66;
+    }
+
+    .texto-secundario {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .imagem-etapa2 {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    .botao {
+      background-color: #00cc66;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 14px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 90%;
+      max-width: 280px;
+    }
+
+    .botao:hover {
+      background-color: #00b359;
+    }
+  </style>
+</head>
+<body>
+<!-- Barra de progresso fixa no topo -->
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 6px; background-color: #e0e0e0; z-index: 9999;">
+  <div id="barra-progresso" style="width: 0%; height: 100%; background-color: #000; transition: width 1s ease;"></div>
+</div>
+
+<!-- Espaço para compensar a altura da barra -->
+<div style="height: 6px;"></div>
+
+<script>
+  // Defina aqui a porcentagem da etapa atual (ex: 20%, 40%, etc.)
+  const progressoAtual = 20; // ← Edite este número para cada página
+  
+  // Aplica o progresso assim que a página carrega
+  window.addEventListener('load', () => {
+    document.getElementById("barra-progresso").style.width = progressoAtual + "%";
+  });
+</script>
+  <div class="container">
+    <h2 class="titulo-destaque">
+      EU FAÇO <span>7k</span> TODOS OS DIAS COM ESSE MERCADO!
+    </h2>
+
+    <p class="texto-secundario">
+      e com toda minha experiência, criei um passo a passo único e a <strong>prova de falhas</strong> para que você <strong>possa fazer também</strong>.
+    </p>
+
+    <!-- Imagem -->
+    <img src="imagem2.jpg" alt="Imagem etapa 2" class="imagem-etapa2"/>
+
+    <!-- Botão CONTINUAR -->
+    <button class="botao" onclick="window.location.href='etapa3.html'">CONTINUAR</button>
+  </div>
+</body>
+</html>
